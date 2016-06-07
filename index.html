@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Hello World, Let's Encrypt</title>
+
+<script>
+if (!navigator.doNotTrack && !navigator.msDoNotTrack) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56433935-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+
+<style>
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-rendering: optimizelegibility;
+}
+
+a {
+  background-color: transparent;
+  color: #2a7ae2;
+  text-decoration: none;
+}
+a:visited { color: #1756a9; }
+a:hover { color: #111; text-decoration: underline; }
+a:active, a:hover { outline: 0; }
+
+strong { font-weight: 700; }
+
+h1 { font-size: 2em; margin: .67em 0; }
+
+h2.through-line {
+  font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  display: table;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: bold;
+  color: #828282;
+  margin-top: 20px;
+}
+
+h2.through-line::after {
+    background-image: linear-gradient(transparent 47%, #DDD 48%, #DDD 52%, transparent 52%);
+    content: "";
+    display: table-cell;
+    width: 100%;
+    border-left: 10px solid #FDFDFD;
+}
+
+.lock {
+  height: 100px;
+  width: 100px;
+  margin: 2ex auto;
+  display: block;
+}
+
+.banner {
+  padding: 35px 0px;
+  text-align: center;
+  background: #E1DCD2 url(./images/3.jpg) no-repeat scroll center center / cover;
+  /* min-width? */
+}
+
+.banner div {
+  background-color: rgba(254, 254, 254, 0.7);
+  border: 1px solid rgba(254, 254, 254, 0.85);
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 80%;
+  max-width: 800px;
+  margin: 0px auto;
+}
+
+.banner div h1 {
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 46px;
+  color: #2C3C69;
+  margin-top: 10px;
+}
+
+.banner div h1 span {
+  color: #DE8216;
+}
+
+.content {
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.content div {
+  letter-spacing: normal;
+  *letter-spacing: normal;
+  *word-spacing: -.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+  -ms-align-content: flex-start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+
+
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+  <img class="lock" src="./images/LE_badge_color.svg">
+</header>
+
+
+<div class="banner">
+  <div>
+    <h1><strong>Hello World, <span>Let's Encrypt</span>.</strong></h1>
+  </div>
+</div>
+
+<!-- HTTP Content -->
+<div class="content">
+  <div>
+    <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a new certificate authority. We created this page to show you our first certificate.</p>
+    <div id="http">
+      <h2 class="through-line">We're trusted</h2>
+      <p>Let's Encrypt is now trusted by a majority of the web browsers, as planned in our <a href="https://letsencrypt.org/2015/08/07/updated-lets-encrypt-launch-schedule.html">launch schedule</a>. Website users no longer need to add our <a href="https://letsencrypt.org/certificates/">ISRG root certificate</a> to utilize certificates issued by Let's Encrypt.</p>
+      <p>Now that we're trusted, this page should have loaded without errors or warnings, and you should see a lock icon in the URL bar.  Click the lock!  In the security information, you should see something like "Verified by: Let's Encrypt".  You can use your browser's certificate viewer to see the details of the certificate.</p>
+      <h2 class="through-line">Get involved</h2>
+      <p>Let's Encrypt is a community-driven project.  We would love for you to get involved.</p>
+      <ul>
+        <li>Help us build the <a href="https://github.com/letsencrypt/boulder/">CA</a> and <a href="https://github.com/letsencrypt/letsencrypt">client</a></li>
+        <li>Participate in the <a href="https://community.letsencrypt.org/">community support forums</a></li>
+        <li>Sign up to be a <a href="https://letsencrypt.org/become-a-sponsor/">sponsor</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
